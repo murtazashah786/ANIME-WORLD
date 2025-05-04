@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AnimeWorld - get in touch with our team for questions, feedback, or collaboration opportunities.">
+    
+    <!-- Page Title -->
+    <title>Contact Us - AnimeWorld</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF5F6D',
+                        secondary: '#6E48AA',
+                        accent: '#00A9FF',
+                        dark: '#252941',
+                        light: '#F2F5FF',
+                        success: '#02C39A',
+                        danger: '#FF5757',
+                        warning: '#FFB01F',
+                    },
+                    fontFamily: {
+                        'heading': ['Poppins', 'sans-serif'],
+                        'body': ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styles to supplement Tailwind -->
+    <style>
+        .bg-gradient-primary {
+            background: linear-gradient(to right, #FF5F6D, #FFC371);
+        }
+        .bg-gradient-secondary {
+            background: linear-gradient(to right, #6E48AA, #8A6FD1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FF5F6D, #6E48AA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .facebook-bg {
+            background-color: #1877F2;
+        }
+        .twitter-bg {
+            background-color: #1DA1F2;
+        }
+        .instagram-bg {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        .discord-bg {
+            background-color: #5865F2;
+        }
+        .fade-in, .slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bg-anime-pattern {
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 95, 109, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 30%, rgba(110, 72, 170, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(0, 169, 255, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(255, 95, 109, 0.05) 0%, transparent 20%);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-light min-h-screen relative">
+    <!-- Background Pattern -->
+    <div class="bg-anime-pattern absolute inset-0 -z-10 pointer-events-none"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-md z-50 backdrop-blur-md">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="font-heading font-bold text-2xl flex items-center">
+                    <span class="text-gradient">AnimeWorld</span>
+                </a>
+                
+                <ul class="hidden md:flex items-center">
+                    <li class="ml-8"><a href="index.html" class="font-medium text-dark hover:text-primary transition-colors duration-300 relative after:absolute after:h-0.5 after:w-0 after:bottom-[-5px] after:left-0 after:bg-gradient-primary hover:after:w-full after:transition-all after:duration-300">Home</a></li>
+                    <li class="ml-8"><a href="about.html" class="font-medium text-dark hover:text-primary transition-colors duration-300 relative after:absolute after:h-0.5 after:w-0 after:bottom-[-5px] after:left-0 after:bg-gradient-primary hover:after:w-full after:transition-all after:duration-300">About</a></li>
+                    <li class="ml-8"><a href="contact.html" class="font-medium text-primary transition-colors duration-300 relative after:absolute after:h-0.5 after:w-full after:bottom-[-5px] after:left-0 after:bg-gradient-primary after:transition-all after:duration-300">Contact</a></li>
+                    <li class="ml-8"><a href="login.html" class="font-medium text-dark hover:text-primary transition-colors duration-300 relative after:absolute after:h-0.5 after:w-0 after:bottom-[-5px] after:left-0 after:bg-gradient-primary hover:after:w-full after:transition-all after:duration-300">Login</a></li>
+                    <li class="ml-8"><a href="register.html" class="font-medium text-dark hover:text-primary transition-colors duration-300 relative after:absolute after:h-0.5 after:w-0 after:bottom-[-5px] after:left-0 after:bg-gradient-primary hover:after:w-full after:transition-all after:duration-300">Register</a></li>
+                </ul>
+                
+                <button class="md:hidden text-dark text-2xl focus:outline-none" id="navbar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="md:hidden h-0 overflow-hidden transition-all duration-300" id="mobile-menu">
+                <a href="index.html" class="block py-3 text-center font-medium text-dark hover:text-primary hover:bg-gray-50 transition-colors duration-300">Home</a>
+                <a href="about.html" class="block py-3 text-center font-medium text-dark hover:text-primary hover:bg-gray-50 transition-colors duration-300">About</a>
+                <a href="contact.html" class="block py-3 text-center font-medium text-primary bg-gray-50 transition-colors duration-300">Contact</a>
+                <a href="login.html" class="block py-3 text-center font-medium text-dark hover:text-primary hover:bg-gray-50 transition-colors duration-300">Login</a>
+                <a href="register.html" class="block py-3 text-center font-medium text-dark hover:text-primary hover:bg-gray-50 transition-colors duration-300">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-heading font-bold text-center mb-16 relative fade-in">
+                Contact Us
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-[50px] h-1 bg-gradient-primary rounded"></span>
+            </h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 slide-up">
+                    <h2 class="text-2xl font-heading font-semibold text-center mb-8">Send Us a Message</h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Murtaza" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="murtazashah@gmail.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="How can we help?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-primary text-white font-heading font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300">Send Message</button>
+                        
+                        <div id="form-status" class="hidden p-4 rounded-lg text-center"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="flex flex-col justify-center slide-up">
+                    <h2 class="text-2xl font-heading font-semibold mb-8">Get in Touch</h2>
+                    
+                    <div class="space-y-8 mb-12">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl flex-shrink-0 mr-6">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-semibold mb-1">Email</h3>
+                                <p class="text-gray-600">786murtazashah@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl flex-shrink-0 mr-6">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-semibold mb-1">Phone</h3>
+                                <p class="text-gray-600">+92 3069696969</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl flex-shrink-0 mr-6">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-heading font-semibold mb-1">Location</h3>
+                                <p class="text-gray-600">Gujrat, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-heading font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="facebook-bg w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity duration-300 hover:-translate-y-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="twitter-bg w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity duration-300 hover:-translate-y-1">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="instagram-bg w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity duration-300 hover:-translate-y-1">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="discord-bg w-12 h-12 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity duration-300 hover:-translate-y-1">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12">
+                <div>
+                    <h3 class="text-xl font-heading font-semibold mb-6 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-[50px] after:h-0.5 after:bg-gradient-primary">About AnimeWorld</h3>
+                    <p class="text-gray-300 mb-6">AnimeWorld is your ultimate destination for all things anime. We provide the latest news, reviews, and information about your favorite anime series and movies.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-primary rounded-full text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-primary rounded-full text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-primary rounded-full text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 hover:bg-primary rounded-full text-white transition-colors duration-300"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-heading font-semibold mb-6 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-[50px] after:h-0.5 after:bg-gradient-primary">Quick Links</h3>
+                    <ul>
+                        <li class="mb-3"><a href="index.html" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Home</a></li>
+                        <li class="mb-3"><a href="about.html" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">About</a></li>
+                        <li class="mb-3"><a href="contact.html" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Contact</a></li>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Anime List</a></li>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Top Anime</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-heading font-semibold mb-6 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-[50px] after:h-0.5 after:bg-gradient-primary">Resources</h3>
+                    <ul>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Anime News</a></li>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Reviews</a></li>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Upcoming Releases</a></li>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Terms of Service</a></li>
+                        <li class="mb-3"><a href="#" class="text-gray-300 hover:text-white hover:pl-1 transition-all duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-heading font-semibold mb-6 relative pb-3 after:absolute after:bottom-0 after:left-0 after:w-[50px] after:h-0.5 after:bg-gradient-primary">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary mr-4 mt-1"></i>
+                            <span class="text-gray-300">786murtazashah@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-primary mr-4 mt-1"></i>
+                            <span class="text-gray-300">+92 3069696969</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-4 mt-1"></i>
+                            <span class="text-gray-300">Gujrat, Pakistan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center py-6 border-t border-gray-800 text-gray-400 text-sm">
+                <p>&copy; <span id="current-year"></span> AnimeWorld. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
